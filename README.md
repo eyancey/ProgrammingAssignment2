@@ -62,6 +62,25 @@ function.
             m
     }
 
+Example
+
+> x <- makeVector(c(1,2,3))
+> x$get()
+[1] 1 2 3
+> cachemean(x)
+[1] 2
+> cachemean(x)
+getting cached data
+[1] 2
+> x$set(c(4,5,6))
+> x$get()
+[1] 4 5 6
+> cachemean(x)
+[1] 5
+> cachemean(x)
+getting cached data
+[1] 5
+
 ### Assignment: Caching the Inverse of a Matrix
 
 Matrix inversion is usually a costly computation and there may be some
